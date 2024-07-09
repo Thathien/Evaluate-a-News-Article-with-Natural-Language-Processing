@@ -1,5 +1,5 @@
-function emailChecker(inputText) {
-    console.log("Running checkForName :", inputText);
+function checkForName(inputText) {
+    console.log("Running checkForName : ", inputText);
     const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     const regex = new RegExp(emailPattern);
 
@@ -11,4 +11,4 @@ function emailChecker(inputText) {
     return true;
 }
 
-export { emailChecker };
+export { checkForName };

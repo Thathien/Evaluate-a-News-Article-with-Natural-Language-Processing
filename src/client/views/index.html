@@ -2,23 +2,26 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
-        <title>Test </title>
+        <title>Test</title>
     </head>
 
     <body>
         <header>
+            <div class="">
+                <marrque>Header</marrque>
+            </div>
             <div class="">Logo</div>
-            <div class="">Navigation</div>
+            <div class="">navigation</div>
         </header>
 
         <main>
             <section>
-                <form id="form" action="" >
+                <form class="form">
                     <input
                         id="name"
                         type="text"
                         name="input"
-                        value="abc123@gmail.com"
+                        value=""
                         placeholder="Name"
                     />
                     <input type="submit" name="" value="submit" />
@@ -28,15 +31,19 @@
             <section>
                 <strong>Form Results:</strong>
                 <div id="results">
-                    Agreement: <span class="agreement"></span><br />
-                    Confidence: <span class="confidence"></span> <br />
-                    Score: <span class="score"></span>
+                    <strong>Sentence_list</strong>
+                    <br>
+                    Agreement : <span class="agreement"></span><br />
+                    Confidence : <span class="confidence"></span> <br />
+                    Score : <span class="score"></span>
+                    <br>
+                    Text : <span class="text"></span>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Footer</p>
         </footer>
     </body>
     <script>
@@ -46,8 +53,9 @@
                 console.log('SW registered successfuly: ', registration);
             });
         });
-        } else{
+        }else{
         console.log("Service Working not supported");
             }
 </script>
+    <script src="/src/client/index.js"></script>
 </html>

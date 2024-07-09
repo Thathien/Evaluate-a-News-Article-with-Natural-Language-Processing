@@ -5,7 +5,7 @@ const FormData = require("form-data");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const axios = require("axios");
-const APIResponseExample = require("./mockAPI.js");
+const mockAPIResponse = require("./mockAPI.js");
 const app = express();
 
 dotenv.config();
@@ -17,17 +17,19 @@ app.use(express.static("dist"));
 
 app.get("/", function (req, res) {
     res.sendFile("dist/index.html");
+    // res.sendFile(path.resolve("src/client/views/index.html"));
 });
 
+// designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
-    console.log("Example app listening on port 8000!");
+    console.log("Example app listening on port 8080!");
 });
 
 app.get("/test", function (req, res) {
-    res.send(APIResponseExample);
+    res.send(mockAPIResponse);
 });
 
-// POST request callBack = (req, res) 
+// POST request
 const callBack = (req, res) => {
     const formdata = new FormData();
     formdata.append("key", process.env.API_KEY);
@@ -40,6 +42,7 @@ const callBack = (req, res) => {
             res.json(response.data);
         })
         .catch(function (error) {
+            // handle error when exception
             console.log(error);
         })
         .finally(function () {

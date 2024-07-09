@@ -1,9 +1,9 @@
 
-import { emailChecker } from "../emailChecker";
+import { checkForName } from "../nameChecker";
 
 describe("Testing the checkName functionality", () => {
     test("Testing the checkForName() function", () => {
         global.alert = jest.fn();
-        expect(emailChecker("abc123@gmail.com")).toEqual(false);
+        expect(checkForName("HienTT24@gmail.com")).toEqual(false);
     });
 });
